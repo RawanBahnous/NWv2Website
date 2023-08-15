@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NW Website</title>
+    <link rel="icon" href="~/images/logo.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Mvc.styles.css" asp-append-version="true" />
+
+
+    <style>
+        
+        footer{
+            padding:15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: black;
+        }
+
+        .navbar-nav .nav-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <header>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark bg-color-page border-bottom box-shadow mb-3">
+                    <div class="container-fluid">
+
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/images/logo.png" style="width:30px;height30px" />
+                            NW
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="Admin" asp-action="Login">Login</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="Admin" asp-action="Register">Register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="Admin" asp-action="Index">Adminpanel</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="News" asp-action="Search">Search News</a>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="News" asp-action="GetAllNews"> News</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="Author" asp-action="GetAllAuthors"> Authors</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="News" asp-action="UploadImage"> Authors</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+        }
+        else
+        {
+
+            <header>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-color-page border-bottom box-shadow mb-3">
+                    <div class="container-fluid">
+
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/images/logo.png" style="width:30px;height30px" />
+                            NW
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="Admin" asp-action="Login">Login</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" asp-area="" asp-controller="Admin" asp-action="Register">Register</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        }
+    }
+    else
+    {
+
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark bg-color-page border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand text-white " asp-controller="Home" asp-action="Index">
+                        <img src="~/images/logo.png" style="width:30px;height30px" />
+                        NW
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon text-white "></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-white " asp-area="" asp-controller="Home" asp-action="About">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white " asp-area="" asp-controller="Admin" asp-action="Login">Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white " asp-area="" asp-controller="Admin" asp-action="Register">Register</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    }
+
+  
+
+
+
+            @RenderBody()
+  
+
+    <footer class="border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Join Us</h3>
+                <p>Stay updated with the latest news and updates. Subscribe to our newsletter.</p>
+                
+            </div>
+            <div class="col-md-6">
+                <h3>About NW Website</h3>
+                <p>NW Website is a leading platform for news and information. We strive to provide accurate and timely news to our readers.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-icons ">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="text-center">&copy; 2023 NW Website. All rights reserved.</p>
+</footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

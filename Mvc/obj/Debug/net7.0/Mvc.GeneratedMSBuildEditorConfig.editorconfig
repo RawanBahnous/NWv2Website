@@ -1,0 +1,133 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Mvc
+build_property.RootNamespace = Mvc
+build_property.ProjectDir = C:\Users\DELL\Desktop\NewsYaraaabbb\WebApplication1\Mvc\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\DELL\Desktop\NewsYaraaabbb\WebApplication1\Mvc
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Admin/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Author/CreateNewAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXENyZWF0ZU5ld0F1dGhvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Author/DeleteAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXERlbGV0ZUF1dGhvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Author/DetailsAuthors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXERldGFpbHNBdXRob3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Author/GetAllAuthors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXEdldEFsbEF1dGhvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Author/GetAuthorsAscending.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXEdldEF1dGhvcnNBc2NlbmRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Author/SearchAuthors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXFNlYXJjaEF1dGhvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Home/DetailsNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzTmV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Home/SortByDate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb3J0QnlEYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/CreateNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xDcmVhdGVOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/DeleteNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xEZWxldGVOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/DetailsNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xEZXRhaWxzTmV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/GetAllNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xHZXRBbGxOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/GetNewsAscending.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xHZXROZXdzQXNjZW5kaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/GetNewsByAuthorId.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xHZXROZXdzQnlBdXRob3JJZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/GetNewsDescending.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xHZXROZXdzRGVzY2VuZGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/SearchNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xTZWFyY2hOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/News/UploadImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xVcGxvYWRJbWFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Shared/_LayoutAdminPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pblBhbmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/NewsYaraaabbb/WebApplication1/Mvc/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-djzr31a0jt

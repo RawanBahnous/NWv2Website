@@ -1,0 +1,180 @@
+﻿@model Mvc.Models.IndexViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+}
+
+<style>
+   
+    body{
+        overflow-x:hidden;
+    }
+    .b-border {
+        border-bottom: 2px solid #302a1f;
+      }
+      .bt-border {
+        font-size: 40px;
+        color: #242017;
+        border-top: 2px solid #302a1f;
+        border-bottom: 2px solid #302a1f;
+      }
+      .row {
+        margin-top: 5px;
+      }
+
+      .b-left {
+        border-left: 2px solid #302a1f;
+      }
+      section {
+        border-left: 2px solid #302a1f;
+        border-right: 2px solid #302a1f;
+      }
+
+    .bg-dark-button{
+        color:ghostwhite;
+        padding:2px 10px;
+        cursor:pointer;
+        text-decoration:none;
+        background-color:black;
+    }
+
+    .dashboard-item {
+        background-color: #f0f0f0;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+
+@{
+    var topThreeNews = Model.News.Take(2);
+    var topThreeAuthors = Model.Authors.Take(4);
+    int newsCount = Model.News.Count();
+    int authorCount = Model.Authors.Count();
+}
+
+<div class="container p-5">
+
+
+    <div class="container m-5 .b-border ">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="dashboard-item">
+                <h1>Admin Dashboard</h1>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+    <div class="container m-2 .b-border ">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="dashboard-item">
+                <h2>News Count</h2>
+                <p>@newsCount</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="dashboard-item">
+                <h2>Authors Count</h2>
+                <p>@authorCount</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="container p-5 .b-border ">
+
+    <div class="row justify-content-center">
+        <h2>Top Authors </h2>
+        @foreach (var AuthorItem in topThreeAuthors)
+        {
+            <div class="col-md-6 col-lg-3">
+                <h3>@AuthorItem.Name</h3>
+            </div>
+        }
+
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <h2>Top News</h2>
+        @foreach (var newsItem in topThreeNews)
+        {
+            <div class="col-md-6">
+                <div class="row justify-content-center hover-img">
+                    <img src="~/images/1.jpg" style="width:100%;height100%">
+                </div>
+                <div>
+                    <h3>@newsItem.Title</h3>
+                    <p>Author: @Model.Authors.FirstOrDefault(a => a.Id == newsItem.AuthorID)?.Name</p>
+                </div>
+            </div>
+        }
+
+    </div>
+   <div class="row">
+        <div class="col-md-12">
+            <section>
+                @foreach (var news in Model.News)
+                {
+                    <div class="row justify-content-center">
+
+                        <div class="col-md-12">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+                                    <img src="~/images/1.jpg" alt="@news.Title" width="100%" height="100%" />
+
+                                    @*<img src=" @Url.Content(news.Image)" alt="@news.Title" width="100%" height="100%" />*@
+                                </div>
+                                <div class="col-md-8">
+                                    <h2 class="p-3 bt-border text-center">
+                                        @news.Title
+                                    </h2>
+                                    <div class="row justify-content-around">
+
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                    @Html.ActionLink("Details", "DetailsAuthors", new { id = news.Id }, new { @class = "btn btn-secondary btn-sm" })
+
+                                                <a class="bg-dark-button"
+                                                href="@Url.Action("DetailsNews", "Home", new { id = news.Id })">Show News Details</a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>@news.PublicationDate.ToString("yyyy,M,MMM")</p>
+
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><strong>Author:</strong> @Model.Authors.FirstOrDefault(a => a.Id == news.AuthorID)?.Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+
+                                                <p>@news.Content</p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                }
+            </section>
+        </div>
+
+   </div>
+
+</div>
+
+
+</div>

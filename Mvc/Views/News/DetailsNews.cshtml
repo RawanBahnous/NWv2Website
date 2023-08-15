@@ -1,0 +1,73 @@
+﻿@model Mvc.Models.News
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+    ViewData["Title"] = "News Details";
+}
+
+
+
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+
+    <h1>@Model.Title Article Details</h1>
+            <hr></hr>
+         <div class="row justify-content-center">
+            <div class="col-md-6">
+            <h4>Title</h4>
+                </div>
+             <div class="col-md-6">
+                 <p>@Model.Title</p>
+            </div>
+        </div>
+        <hr></hr>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h4>Content</h4>
+                </div>
+                <div class="col-md-6">
+                    <p>@Model.Content</p>
+                </div>
+            </div>
+            <hr></hr>
+  <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h4>Publication Date</h4>
+                </div>
+                <div class="col-md-6">
+                    <p>@Model.PublicationDate</p>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h4>Creation Date</h4>
+                </div>
+                <div class="col-md-6">
+                    <p>@Model.CreationDate</p>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h4>Image</h4>
+                </div>
+                <div class="col-md-6">
+                    <p>@Model.Image</p>
+                    @if (!string.IsNullOrEmpty(Model.Image))
+                    {
+                        <img src="@Url.Content(Model.Image)" alt="News Image" style="max-width: 500px" />
+                    }
+                </div>
+            </div>
+            <hr></hr>
+                
+                
+<p>
+    @Html.ActionLink("Back to News List", "GetAllNews")
+</p>
+</div>
+</div>
+</div>

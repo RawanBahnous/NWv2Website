@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Mvc.Models.Author>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+    ViewData["Title"] = "GetAuthorsAscending";
+}
+
+<h1>Get Authors Ascending</h1>
+
+<p>
+    <a asp-action="CreateNewAuthor">Add Author</a>
+    <a asp-action="GetAuthorsAscending" asp-controller="Authors" asp-route-sortOrder="asc">Sort Asc</a>
+    <a asp-action="GetAuthorsAscending" asp-controller="Authors" asp-route-sortOrder="desc">Sort Desc</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { item.Id }) |
+                    @Html.ActionLink("Details", "DetailsAuthors", new { item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

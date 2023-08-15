@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Mvc.Models.News>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+    ViewData["Title"] = "GetNewsAscending";
+}
+
+<div class="container mt-5">
+    <h1>Sort Articles By Title Ascending</h1>
+    <p>
+        <a asp-action="GetAllNews" asp-controller="News">Back</a>
+    </p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Publication Date</th>
+                    <th>Creation Date</th>
+                    <th>Image</th>
+                    <th>Author ID</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Content)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PublicationDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CreationDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Image)</td>
+                        <td>@Html.DisplayFor(modelItem => item.AuthorID)</td>
+                        <td>@Html.ActionLink("Details", "DetailsNews", "News", new { id = item.Id }, new { @class = "btn btn-info" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

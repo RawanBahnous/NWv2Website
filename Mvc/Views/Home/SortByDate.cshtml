@@ -1,0 +1,36 @@
+﻿@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Sort By Date";
+    Layout = "_Layout";
+}
+
+<style>
+    body{
+        background-color:floralwhite;
+    }
+</style>
+
+
+<div class="container">
+<h1>Sorted News</h1>
+
+<div class="row justify-content-center">
+    @foreach (var news in Model.News)
+    {
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="@news.Image" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <h5 class="card-title">@news.Title</h5>
+                    <p class="card-text">@news.Content</p>
+                    <p class="card-text"><strong>Author:</strong> @Model.Authors.FirstOrDefault(a => a.Id == news.AuthorID)?.Name</p>
+                    <p class="card-text"><strong>Publication Date:</strong> @news.PublicationDate.ToString("yyyy,M,MMM")</p>
+                    <a href="@Url.Action("DetailsNews", "Home", new { id = news.Id })" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+</div>

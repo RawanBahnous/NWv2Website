@@ -1,0 +1,93 @@
+﻿@model Mvc.Models.News
+
+@{
+    ViewData["Title"] = "DetailsNews";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+    <h1>@Html.DisplayFor(model => model.Title)</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">News Details</h4>
+            <hr />
+            <dl class="row ">
+                <dt class="col-sm-2">Title</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Title)</dd>
+
+                <dt class="col-sm-2">Content</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Content)</dd>
+
+                <dt class="col-sm-2">Publication Date</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.PublicationDate)</dd>
+
+                <dt class="col-sm-2">Creation Date</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.CreationDate)</dd>
+
+                <dt class="col-sm-2">Image</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Image)</dd>
+            </dl>
+        </div>
+
+    </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <a asp-action="Index" class="btn btn-primary">Back</a>
+</div>
+<style>
+    .container {
+        margin-top: 50px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-image {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<div class="container">
+    <div class="col-md-8 text-center">
+        <h1>@Html.DisplayFor(model => model.Title)</h1>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4">
+                <a asp-action="Index" class="btn btn-primary">Back</a>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h3>Author Name:</h3>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="row">
+                    <img src="~/images/th.jpg" alt="newsimg" class="news-image">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+
+                    <h1>Title: @Html.DisplayFor(model => model.Title)</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Publication Date: @Html.DisplayFor(model => model.PublicationDate)</p>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-10">
+                        <p>
+                            @Html.DisplayFor(model => model.Content)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

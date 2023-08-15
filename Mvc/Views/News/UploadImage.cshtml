@@ -1,0 +1,17 @@
+﻿@model Mvc.Models.UploadImageModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+    ViewData["Title"] = "Upload Image";
+}
+
+<h1>Upload Image</h1>
+
+<form method="post" enctype="multipart/form-data" asp-action="UploadImage" asp-controller="News">
+    <div class="form-group">
+        <input type="hidden" asp-for="NewsId" />
+        <label asp-for="ImageFile">Select Image:</label>
+        <input type="file" asp-for="ImageFile" class="form-control-file" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>

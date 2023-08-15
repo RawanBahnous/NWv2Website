@@ -1,0 +1,80 @@
+﻿@*@{
+    Layout = User.Identity.IsAuthenticated && User.IsInRole("Admin") ? "~/Views/Shared/_LayoutAdminPanel.cshtml" : "~/Views/Shared/_Layout.cshtml";
+}
+*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NW Admin Panel</title>
+    <link rel="icon" href="~/images/logo.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: aliceblue;
+    }
+
+    .container-fluid {
+        margin-top: 0px;
+    }
+
+    .sidebar-fixed ul li a {
+        color: white;
+    }
+
+    .sidebar-fixed {
+        height: 100vh;
+    }
+
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 flex-md-row d-md-block bg-dark sidebar">
+                <div class="sidebar-fixed">
+                    <ul class="nav flex-column text-center mt-5 text-white">
+                        <li class="nav-item">
+                            <img src="~/images/logo.png" width="150px" height="150px" />
+                            <br />
+                            NW Website
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-5" asp-controller="Admin" asp-action="Index"> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-5" asp-controller="News" asp-action="GetAllNews"> News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-5" asp-controller="Author" asp-action="GetAllAuthors"> Authors</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                @RenderBody()
+
+                <footer class="border-top p-3 mt-4">
+                    <div class="container text-center">
+                        <p>&copy; 2023 Admin Panel. All rights reserved.</p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

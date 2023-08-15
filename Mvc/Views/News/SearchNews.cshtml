@@ -1,0 +1,44 @@
+﻿@model List<Mvc.Models.News>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+
+    ViewData["Title"] = "SearchNews";
+}
+
+<h1>Search Results</h1>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Publication Date</th>
+                <th>Creation Date</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Content)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PublicationDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CreationDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Image)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No results found.</p>
+}
+
+<p>
+    <a asp-action="GetAllNews" asp-controller="News">Back to All News</a>
+</p>
