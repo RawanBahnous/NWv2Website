@@ -1,4 +1,4 @@
-# NG Website
+# NW Website
 News system is developed using ASP.net API Core and ASP .NET MVC Core, it offers efficient features that allow users to seamlessly view all news articles, while providing administrators the capability to add news articles with enhanced authentication and authorization controls
 
 ## Project Documentation:
@@ -6,13 +6,13 @@ News system is developed using ASP.net API Core and ASP .NET MVC Core, it offers
 
 ## How To Use:
    - Now you Can Register With a Register Form
-   - Make Crud Operations As NG Admin
+   - Make Crud Operations As NW Admin
    - Or Just View All Articles As Enduser
    - Search Article By Title
    - Sort By Publication Date or By Name
 
 ## How To Run the Project
-Follow these steps to run the NG project on your local machine:
+Follow these steps to run the NW project on your local machine:
 
  1 - Download the Zip File:
 
